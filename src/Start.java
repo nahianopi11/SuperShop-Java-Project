@@ -7,14 +7,12 @@ public class Start {
 
         while (true) {
             try {
-                // Main menu
                 System.out.println("\nChoose an option:");
                 System.out.println("1. Product Management\n2. Customer Management\n3. Sales\n4. Shop Info\n5. Exit");
                 int choice = Integer.parseInt(scanner.nextLine().trim());
 
                 switch (choice) {
                     case 1:
-                        // Product Management submenu
                         System.out.println("\n1. Add Product\n2. Remove Product\n3. Search Product\n4. Show All Products\n5. Back");
                         int productChoice = Integer.parseInt(scanner.nextLine().trim());
                         switch (productChoice) {
@@ -35,14 +33,13 @@ public class Start {
                                 shop.displayProducts();
                                 break;
                             case 5:
-                                // Back to main menu
                                 break;
                             default:
                                 System.out.println("Invalid option.");
                         }
                         break;
                     case 2:
-                        // Customer Management submenu
+
                         System.out.println("\n1. Add Customer\n2. Remove Customer\n3. Search Customer\n4. Show All Customers\n5. Back");
                         int customerChoice = Integer.parseInt(scanner.nextLine().trim());
                         switch (customerChoice) {
@@ -62,14 +59,12 @@ public class Start {
                                 shop.showAllCustomers();
                                 break;
                             case 5:
-                                // Back to main menu
                                 break;
                             default:
                                 System.out.println("Invalid option.");
                         }
                         break;
                     case 3:
-                        // Sales Management submenu
                         System.out.println("\n1. Sell Product\n2. Show Sales Report\n3. Back");
                         int salesChoice = Integer.parseInt(scanner.nextLine().trim());
                         switch (salesChoice) {
@@ -81,7 +76,6 @@ public class Start {
                                 shop.showSalesReport();
                                 break;
                             case 3:
-                                // Back to main menu
                                 break;
                             default:
                                 System.out.println("Invalid option.");
@@ -99,7 +93,7 @@ public class Start {
                 }
             } catch (Exception e) {
                 System.out.println("Invalid input. Please try again.");
-                scanner.nextLine(); // Clear buffer
+                scanner.nextLine();
             }
         }
     }
